@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>作业！</title>
+		<style type="text/css">
+			table{
+				/*border: 1;*/
+				border-collapse: collapse;
+			}
+			td{
+				border: solid 1px black;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<p id="xianshi"></p>
+		<table>
+			<tr>
+				<td>姓名</td>
+				<td>身高</td>
+				<td>年龄</td>
+				<td>性别</td>
+				<td>体重</td>
+			</tr>
+			<tr>
+				<td id="xingming"></td>
+				<td id="shengao"></td>
+				<td id="nianling"></td>
+				<td id="xingbie"></td>
+				<td id="tizhong"></td>
+			</tr>
+		</table>
+		<button type="button" onclick="dianji();">我他？</button>
+		<script type="text/javascript">
+			function tongji (name,tall,age,sex,weight) {
+				this.name = name 
+				this.tall = tall
+				this.age = age 
+				this.sex = sex
+				this.weight = weight
+			}
+			var tongji1 = new tongji('刘川1','221','21','男','91KG')
+			var tongji2 = new tongji('刘川2','222','22','女','92KG')
+			var tongji3 = new tongji('刘川3','223','23','老','93KG')
+			var tongji4 = new tongji('刘川4','224','24','少','94KG')
+			var tongji5 = new tongji('刘川5','225','25','幼','95KG')
+			var tongji6 = new tongji('刘川6','226','26','青','96KG')
+			var tongji8 = new tongji('刘川8','228','28','黄','98KG')
+			var tongji7 = new tongji('刘川7','227','27','红','97KG')
+			
+//			var jieguo=concat(tongji2,tongji3)
+			var jieguo = [tongji1,tongji2,tongji3,tongji4,tongji5,tongji6,tongji7,tongji8]
+			
+			function dianji () {
+			console.log(jieguo)
+			var i = Math.random()*8 -1
+			 var j = Math.ceil(i)
+			 console.log(j)
+			 console.log(jieguo[j])
+			 var xingming = document.getElementById('xingming')
+			 var xianshi = document.getElementById('xianshi')
+			 var xingming = document.getElementById('xingming')
+			 var shengao = document.getElementById('shengao')
+			 var nianling = document.getElementById('nianling')
+			 var tizhong = document.getElementById('tizhong')
+			 
+			 xingming.innerHTML = jieguo[j].name
+			 shengao.innerHTML = jieguo[j].tall
+			 nianling.innerHTML = jieguo[j].age
+			 xingbie.innerHTML = jieguo[j].sex
+			 tizhong.innerHTML = jieguo[j].weight
+			 console.log()
+			}
+			
+		</script>
+	</body>
+</html>

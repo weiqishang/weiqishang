@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>DOM文档对象模型</title>
+	</head>
+
+	<body>
+		<!--DOM:文档对象模型：document object model-->
+		<!--HTML DOM：规定了访问和操作HTML元素的标准方法
+			通过它，可以对HTML元素进行获取、修改、  删除，添加等操作
+		-->
+		<main>
+			<div id="demo" title="标题">
+				<section class="sec">
+					<p>获取当前标签的方法</p>
+					<p>这是第二个添加的段落标签</p>
+					<p>这是第三个添加的段落标签</p>
+				</section>
+			</div>
+		</main>
+		<script type="text/javascript">
+			//获取元素节点
+			//通过ID名获取标签
+			var div = document.getElementById('demo')
+				//通过标签名获取标签
+			var main = document.getElementsByName('main')[0]
+				//通过类名获取标签
+			var section = document.getElementsByClassName('sec')[0]
+				//通过CSS选择器 获取符合选择的标签
+				//querySelector()选择的是第一个符合的标签
+			var p = document.querySelector('p')
+				//			querySelectorAll() 选择的所有的符合的标签
+			var pLi = document.querySelectorAll('p')
+				//获取文本节点，即获取标签内部的内容
+			var divContent = div.innerHTML
+			console.log(divContent)
+
+			// 获取标签的属性 sttributrs
+			var divAttr = div.attributes
+			//		console.log(divAttr)
+			div.title = '新改的标题'
+			console.log(divAttr)
+			div.id = 'demo1'
+			console.log(divAttr)
+			//获取标签的父级元素   parentNode属性
+			var divParent = div.parentNode
+			console.log(divParent)
+			//获取标签的子集元素   childNodes属性
+			var  divChild = div.childNodes
+			console.log(divChild)
+			console.log(divChild[1])
+			//添加新的子节点
+//			div.appendChild(p) //改变的是原标签的位置
+			//创建新标签
+			var img = document.createElement('img')
+			div.appendChild(img)
+			var span = document.createElement('span')
+			div.appendChild(span)
+			//创建文本节点，并添加creatTextNode
+			var spanText = document.createTextNode('这是添加的span内容')
+//			span.innerHTML = spanText
+			span.appendChild(spanText)
+			//创建属性节点   createAttributes  方法已经废弃掉
+//			var spanTitle = document.createAttribute('title')
+			//新的属性方法 element.setAttribute(name.value)
+			span.setAttribute('title','标签名称')
+//			span.appendChild(spanTitle)
+			span.style.backgroundColor = 'red'
+//			Camel-Case 驼峰命名法
+		</script>
+	</body>
+
+</html>

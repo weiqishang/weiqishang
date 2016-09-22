@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>字符串的属性以及方法</title>
+		<style>
+			
+		</style>
+	</head>
+	<body>
+		<pre>
+			字符串string用于表述文本域的数据
+			字符串的值是包含在引号之间
+			
+			var i = 1 -- 数字类型
+			var i = '1' -- 字符串类型
+		</pre>
+		<script>
+			//字符串字面值创建字符串
+			var i = '123nams234d_om  ge'
+			console.log(i)
+			console.log(i.length) //字符串的长度报喊空格
+			console.log(i[4])  // 字符串有索引值
+			//返回的是创建字符串的函数
+			console.log(i.constructor)//function String()
+			var str
+			function strs () {
+				str = 'name'
+				console.log(str)
+			}
+			strs()
+			
+			function obj (name,age,sex) {
+				this.name = name
+				this.age = age
+				this.sex = sex
+			}
+			var obj1 = new obj('wang',13,'man')
+//			obj1.tall = 178 //添加
+			console.log(obj1)
+			obj.tall = null
+			console.log(obj)
+			var obj2 = new obj ('zhang',15,'man',178)
+			console.log(obj2)
+			obj.prototype.tall = null
+			obj2.tall = 188
+//			var obj2 = new obj ('zhang',15,'man',178)
+			console.log(obj2)
+		</script>
+		<script type="text/javascript">
+			var chars = 'ABCDEFGHI'
+//			chars(index)根据索引值判断当前位置的字符
+			console.log(chars.charAt(4))
+		</script>
+	</body>
+</html>

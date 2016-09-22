@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> 创建数组以及数组的常用操作 </title>
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        <script>
+            // 方法1：直接创建字面量的数组 
+            // 字面量(字面值)：由语法表达式定义的常量( 固定不变的值，可通过当前的值判断数据类型 )
+            var a = [ 1,2,3,4,5,6,7 ]  // 数组
+            var b = { 'name':'yan', age:3 }   // 对象
+            var c = 'name'   // 字符串
+            
+            console.log(a)
+            
+            // 方法2 创建一个空的数组，填充数组内容(通过Array()方法创建)
+            var aArr = new Array()
+            aArr[0] = 'name'
+            aArr[1] = 3
+            aArr[2] = ''
+            aArr[3] = null
+            aArr[4] = 'yan'
+            console.log(aArr)  // [ 'name', 3, '' , null, 'yan' ]
+            
+            // 方法3 创建带有内容的数组
+            var bA = new Array( 'name', 3,'age')
+            console.log(bA)
+            
+            // 数组：包含字符串、数字、对象等，可存储大量的数据信息
+            var list = [ 1,2,3,4,5,6,7 ]
+            // 数组的长度 = 数组内容的个数
+            // console.log(list.length)  // 7
+            // 索引：即计数，第n个内容 list[n-1]，从0开始
+            // console.log(list[0])  // 1
+            list[1] = 'name'
+            console.log(list) 
+            // 通过指定的数组名称以及索引，可以访问某个特定的元素，改变内容
+            // join() 数组的方法：把数组中的所有元素转换成一个字符串
+            // ()内部是分隔符，默认是逗号，也可以设置其他分隔符
+            var result = list.join()
+            var result = list.join('*')
+            console.log(result)  // 1,name,3,4,5,6,7
+            // 1*name*3*4*5*6*7
+            console.log( typeof(result) )  // string
+            
+            // 数组排序 -- 升序  降序
+            // sort() 对数组的元素进行排序，排序可以是字母或数字，默认是字母升序
+            // 使用数字进行的排序的时候，需要通过一个函数作为参数来调用
+            var tall = [ 156,165,133,190,148,198,186,175,15,140 ] 
+            // tall.sort()
+            // console.log(tall)
+            // tall.sort( function(c,d){ return d - c } )   // 降序
+            // console.log(tall)
+            
+            // var m = function(a,b){
+            //     return b - a
+            // }
+            // console.log( m(3,1) )
+            
+            // 遍历数组查找，一个一个找到数组中所有的元素
+            for( var i = 0; i < tall.length; i++ ){
+                console.log(tall[i])
+            }
+            
+            // 示例：获取最高的身高值
+            var maxT = tall[0]
+            var minT = tall[0]
+            for( var i = 0; i < tall.length; i++  ){
+                if( maxT < tall[i] ){
+                    maxT = tall[i]
+                }    // 获取最大值
+                
+                if( minT > tall[i] ){
+                    minT = tall[i]
+                }   // 获取最小值
+            } 
+            console.log(maxT)
+            console.log(minT)
+        </script>
+    </body>
+</html>

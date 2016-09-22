@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>节点的属性</title>
+	</head>
+	<body>
+		<main title='标题'>
+			<div>
+				<p>这是第一个段落</p>
+				<p>这是第二个段落</p>
+			</div>
+		</main>
+		<script>
+			var main = document.getElementsByTagName('main')[0]
+			var div = document.getElementsByTagName('div')[0]
+			var p1 = document.getElementsByTagName('p')[0]
+			var p2 = document.getElementsByTagName('p')[1]
+			var divAttr = div.setAttribute('title','属性值')
+//			var mainAttr = main.getAttribute('title')
+			//标签的内容 innerHTML
+			console.log(main.innerHTML)
+			//main的title标题
+			console.log(main.title)
+			//节点的名称 nodename
+			//输出元素节点的名称
+			console.log(main.nodeName)
+			console.log( div.nodeName)
+//			console.log(divAttr.nodeName)
+			
+		</script>
+	</body>
+</html>

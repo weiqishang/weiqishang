@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> 纯JS创建页面 </title>
+        <style>
+            body{
+                margin:0;
+            }
+            main{
+                width:800px;
+                margin:50px auto;
+                background:red;
+                color:#fff;
+                overflow:hidden;
+                text-align:center;
+            }
+            section{
+                box-sizing:border-box;
+                width:33.33%; float:left; height:100px; line-height:100px;
+                border:solid 2px #fff;
+            }
+            .current{
+                background:blue;
+                
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <div>
+                <section>
+                    浮动布局1
+                </section>
+                <section>
+                    浮动布局2
+                </section>
+                <section>
+                    浮动布局3
+                </section>
+            </div>
+        </main>
+        <script>
+            var sec1 = document.getElementsByTagName('section')[0]
+            sec1.addEventListener('click', click1)
+            function click1(){
+                sec1.innerHTML = '这是替换的内容'
+                sec1.className = 'current'
+            }
+        </script>
+    </body>
+</html>

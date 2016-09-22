@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>按位运算符</title>
+	</head>
+
+	<body>
+		<script type="text/javascript">
+			//按位运算符:将两个操作时转换成二进制比较
+			//如果相同位置上的数字都为1，则返回1 否则返回0，输出的数值 以十进制表示
+			//按位和
+			var a = 10 //8 + 2  二进制：1010 
+			var b = 15 //8+4+2+1 二进制 ：1111
+			console.log(a & b) // 10             1010
+				//按位运算符 :将两个操作数先转换成二进制比较，如果相同位上的数字有一个为1 则返回1 否则返回0 ，输出的数值以十进制表示
+			console.log(a | b) //15
+				//按位异或运算符在 将两个操作数先转换成二进制比较，两个不相同则返回1，相同则返回0.
+			console.log(a ^ b) //0101 5
+			console.log(~a)
+			console.log(~b)
+				//按威非   把数字先加1 再取其相反数
+
+			//左移位运算符    在当前二进制位数之后  补n个0   然后转换
+			//			console.log(a << n)
+			//右移位运算符 ， 把当前的二进制位数删除右侧的n个位
+			a = 15
+				//			console.log(a >>n)
+				//字符串运算符    把多个字符串合并为一个字符串   +号起连接作用
+			var x = 'name'
+			var y = 'age'
+			console.log(x + y) // 'nameage'
+			x += y
+			console.log(x)
+			var c = 5
+			console.log(x + c)
+			console.log(x - c)
+				//条件运算符 - 三元运算符
+			score = 65
+			score = score > 60 ? '及格' : '不及格'
+			console.log(score)
+				//			语法: 条件? (ture)语句1 : flase语句2
+				//逗号运算符
+			for(var i = 0, j = 9; i <= j; i++, j--)
+				console.log(i,j);
+		</script>
+	</body>
+
+</html>

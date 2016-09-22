@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>删除节点，节点属性</title>
+	</head>
+	<body>
+		<script>
+		//创建标签节点
+			var main = document.createElement('main')
+			var div = document.createElement('div')
+		//将创建好的main节点添加到body上
+			document.body.appendChild(main)
+			main.appendChild(div)
+//			给标签添加属性
+			main.setAttribute('title','标题')
+			//添加文本节点
+			var divText = document.createTextNode('这是新添加的文本节点')
+			div.appendChild(divText)
+			//移除文本节点
+//			div.removeChild(divText)
+//			main.removeChild(div)
+			//替换文本节点 replaceChild(新内容，被替换的内容)
+			var divTexts = document.createTextNode('这是添加的第二个文本节点')
+			div.replaceChild(divTexts,divText)
+			//Element 对象的属性
+		</script>
+	</body>
+</html>

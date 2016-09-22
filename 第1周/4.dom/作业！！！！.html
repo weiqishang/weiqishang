@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>作业呀！！！！！</title>
+	</head>
+	<style type="text/css">
+		.current {
+			background: blue;
+		}
+	</style>
+
+	<body>
+		<script>
+			var body = document.getElementsByTagName('body')[0]
+			var main = document.createElement('main')
+			body.appendChild(main)
+			var div = document.createElement('div')
+			main.appendChild(div)
+			main.setAttribute('style', 'width:800px;margin:50px auto;background:red;color:#fff;overflow:hidden;text-align:center;')
+			var section = document.createElement('section')
+			var oArray = [sectionText = document.createTextNode('浮动布局1'),
+				sectionText = document.createTextNode('浮动布局2'),
+				sectionText = document.createTextNode('浮动布局3')
+			]
+			for(var i = 0; i < 3; i++) {
+				section[i] = document.createElement('section')
+				div.appendChild(section[i])
+				section[i].index = i
+					//				console.log(i)
+				section[i].appendChild(oArray[i])
+				section[i].setAttribute('style', 'box-sizing:border-box;width:33.3%;float:left;height:100px;line-height:100px;border:solid 2px #fff;')
+			}
+			section[0].addEventListener('click', click1)
+   				count = 0;
+			function click1() {
+				count++
+				if(count % 2 != 0) {
+					section[0].innerHTML = '这是替换的内容'
+					section[0].className = 'current'
+				}else{
+					section[0].innerHTML = '浮动布局1'
+					section[0].className = ''
+				}
+			}
+			
+			section[1].addEventListener('click', click2)
+//			var img = document.createElement('image')
+//			section[1].appendChild(img)
+//			img.src = '12.jpg'
+//			
+ 				count = 0;
+			function click2() {
+				count++
+				if(count % 2 != 0) {
+					section[1].style.background = 'url(12.jpg)'
+					section[1].style.backgroundSize = '100%'
+					section[1].innerHTML = 'asdasd'
+//					section[1].className = 'current'
+				}else{
+					section[1].style.background= 'red'
+					
+					section[1].innerHTML = '浮动布局1'
+//					section[0].className = ''
+				}
+			}
+		</script>
+	</body>
+
+</html>

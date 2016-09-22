@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>对象的常用操作（访问、插入、删除等）</title>
+		<style type="text/css">
+			
+		</style>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//以班级学生为例
+			var obj = {  }
+			//给对象添加元素
+			obj.name = '张三'
+			obj.sex = 'man'
+			obj.tall = 185
+			obj.age = 20
+			obj.weight = '79kg'
+			console.log(obj)  //Object { name: "张三", sex: "man", tall: 185, weight: "79kg" }
+			obj.sing = function () {
+				console.log('唱歌')
+			}
+			console.log(obj)
+			//修改对象的内容
+			obj.name = '李四'
+			console.log(obj)
+			delete obj.weight
+			console.log(obj) //Object { name: "李四", sex: "man", tall: 185, sing: obj.sing() 
+			//获取对象所有的元素：遍历  for / in语句
+			//循环遍历对象的属性
+//			for ( var  in Object) {
+//				执行语句
+//			}
+//			var :对象中属性的名称
+//			object:要遍历的对象
+//			对象的属性调用的两种方法
+//			对象的属性可以通过[]进行访问，所以，
+//			有的时候对象也被叫做关联数组，每一个属性都有一个用于访问它的字符串值
+			console.log(obj.name)
+			console.log(obj['name'])
+			
+			var txt = ''
+			var x
+			for ( x in obj ){
+				console.log(x) // x属性名称
+				txt =obj[x]
+//				txt = txt + obj[x]
+				console.log(txt)
+			}
+//			console.log(txt)
+//			数组和对象
+ 			var a = [
+ 			f1= function name () {
+ 				alert('111')
+ 			}
+ 			
+ 			]
+		</script>
+	</body>
+</html>

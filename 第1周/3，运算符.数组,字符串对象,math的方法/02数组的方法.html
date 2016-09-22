@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>数组的方法</title>
+		<style type="text/css">
+			
+		</style>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//合并多个数组cancat,为一个新数组
+			//array.cancat(array1,array2..........)
+			var z = [1,2,3,4,'name']
+			var i = [ 7,8,9,1,2,9,10,11,12 ]
+			var arr = i.concat(z)
+			console.log(arr)
+//			检测数组元素是否符合条件合条件 every（
+			//先写检测的条件，写在函数里
+			//检测数组的元素是否符） 返回值ture false
+			//只要有一个元素不符合条件 则返回flase 剩下的元素将不再检测
+			function active (nums) {
+				return nums > 30  // ture false
+			}
+			console.log(z.every(active))
+			
+			//filter()筛选出符合条件的所有元素，并构成一个新的数组
+//			function active (nums) {
+//				return nums > 2  // ture false
+//			}
+			console.log(z.filter(active))
+			//indexOf()  搜索数组的元素 并返回他的位置
+			//如果检测不到当前元素则返回-1
+			console.log(z.indexOf('name'))
+			console.log(z.indexOf(2))
+			//map（）先通过函数处理数组元素 ，其值组成一个新数组
+			//如果是条件哦岸段，则返回布尔值 ture flase
+			console.log(z.map(active))
+			//pop（）删除最后一个元素，则返回删除的元素 ,影响原来的数组
+			console.log(z.pop())
+			//push（）给当前数组添加新的元素，并返回数组的长度
+			console.log(z.push(2))
+//			slice(stare,end)
+			console.log(z.slice(0,5))
+		</script>
+	</body>
+</html>

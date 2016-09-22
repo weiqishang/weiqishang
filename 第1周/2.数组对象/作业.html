@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>日历作业</title>
+		<style>
+			ul {
+				list-style: none;
+				overflow: hidden;
+				margin: 0px;
+				padding: 0px;
+			}
+			
+			body,
+			h2,
+			p {
+				margin: 0px;
+				padding: 0;
+			}
+			
+			.da {
+				width: 248px;
+				background: #eaeaea;
+				padding: 0 0 10px 10px;
+			}
+			
+			li {
+				color: #fff;
+				float: left;
+				width: 40px;
+				height: 40px;
+				font-size: 14px;
+				text-align: center;
+				background: #424242;
+				line-height: 1.3;
+				list-style-type: none;
+				border: 1px solid #424242;
+				margin: 10px 10px 0 0;
+				padding: 5px;
+			}
+			
+			li strong {
+				display: block;
+				font-size: 18px;
+			}
+			
+			.xia {
+				color: #666;
+				background: #f1f1f1;
+				border: 1px solid #fff;
+				margin: 10px 10px 0 0;
+				padding: 5px;
+			}
+			
+			h2 {
+				font-size: 14px;
+			}
+			
+			.gaibian {
+				color: #F69;
+				background: #fff;
+			}
+		</style>
+	</head>
+	<!--li.oncilck= function-->
+
+	<body>
+		<div class="da">
+			<ul id="dian">
+				<li><strong>1</strong>JAN</li>
+				<li><strong>2</strong>FER</li>
+				<li><strong>3</strong>MAR</li>
+				<li><strong>4</strong>APR</li>
+				<li><strong>5</strong>MAY</li>
+				<li class="gaibian"><strong>6</strong>JUN</li>
+				<li><strong>7</strong>JUL</li>
+				<li><strong>8</strong>AUG</li>
+				<li><strong>9</strong>SEP</li>
+				<li><strong>10</strong>OCT</li>
+				<li><strong>11</strong>NOV</li>
+				<li><strong>12</strong>DEC</li>
+
+			</ul>
+			<div class="xia">
+				<h2>
+                <strong id="yue" >6</strong>
+                月节日
+            </h2>
+				<p id="a">端午节：6月4日至6日放假3天。</p>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var oArray = [
+				'元旦：1月1日至3日放假三天',
+				'春节：2月2日至8日放假7天。',
+				'妇女节：3月8日妇女节，与我无关。',
+				'清明节：4月3日至5日放假3天',
+				'劳动节：4月30日至5月2日放假3天。',
+				'端午节：6月4日至6日放假3天。',
+				'小暑：7月7日小暑。不放假。',
+				'七夕节：8月6日七夕节。不放假。',
+				'中秋节：9月10日至12日放假3天。',
+				'国庆节：10月1日至7日放假7天。',
+				'立冬：11月8日立冬。不放假。',
+				'艾滋病日:12月1日<br />废除奴隶制国际日:12月2日。'
+			]
+
+			var a = document.getElementById('a')
+				//			var dian = document.getElementById('dian')
+			var yue = document.getElementById('yue')
+			var li = document.getElementsByTagName('li')
+
+			
+
+//				for(var i = 0; i < oArray.length; i++) {
+////					oArray.index = i
+//					li[i].index = i
+////					console.log(i)
+//					li[i].onclick = function() {
+//					
+//						//				console.log(i)
+//						//	 		oArray[i].index = i
+//						//			console.log(oArray[i])
+//						//			return 
+//
+//					//			oArray.indexOf('元旦：1月1日至3日放假三天',i)+1
+//					//			alert(i)
+//					//			console.log(i)
+//
+//					a.innerHTML = oArray[this.index]
+////					console.log(i)
+//					yue.innerHTML =this.index+1
+//					for(var n = 0; n < oArray.length; n++){ 
+//						li[n].className=''
+//						this.className='gaibian'
+//					}
+//				}
+//			}
+			//获取数组中所有元素内容的索引值
+//			for( var = i ; i < oArray.length;i++)
+		</script>
+	</body>
+
+</html>
